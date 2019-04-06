@@ -1,0 +1,11 @@
+<div class = "contents row center" style="padding-top: 50px;">
+  <div class="col s12 m6 offset-m3">
+    <h5>
+      編集する
+    </h5>
+    <%= form_with model: @tweet, local: true do |form| %>
+      <%= form.text_area :body %>
+      <%= form.submit :UPDATE %>
+    <% end %>
+  </div>>
+</div>

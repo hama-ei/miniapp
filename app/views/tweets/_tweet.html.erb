@@ -1,0 +1,16 @@
+<div class="row" >
+  <div class="col s12 m6 offset-m3">
+    <div class="card">
+      <div class="card-content deep-orange-text">
+        <p><%= simple_format(tweet.body) %></p>
+      </div>
+      <div class="card-action">
+        <% if user_signed_in? && current_user.id == tweet.user_id %>
+            <%= link_to 'EDIT', "/tweets/#{tweet.id}/edit"%>
+            <%= link_to 'DELETE', "/tweets/#{tweet.id}", method: :delete %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

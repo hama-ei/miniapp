@@ -1,0 +1,9 @@
+<div class="row" style="padding-top: 50px;">
+  <div class="col s12 m6 offset-m3">
+    <h4>New Post</h4>
+    <%= form_with model: @tweet, local: true do |form| %>
+      <%= form.text_area :body %>
+      <%= form.submit :SENT %>
+    <% end %>
+  </div>
+</div>
